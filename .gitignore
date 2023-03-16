@@ -1,5 +1,6 @@
 # Windows files
 Thumbs.db
+build
 
 # CMake build folders
 /_build*

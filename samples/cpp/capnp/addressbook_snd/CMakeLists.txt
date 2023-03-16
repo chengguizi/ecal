@@ -25,6 +25,9 @@ project(addressbook_snd)
 find_package(CapnProto REQUIRED)
 find_package(eCAL REQUIRED)
 
+# set( CMAKE_BUILD_TYPE Release)
+# set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
+
 set(CAPNPC_IMPORT_DIRS ${CMAKE_CURRENT_SOURCE_DIR})
 capnp_generate_cpp(CAPNP_SRCS CAPNP_HDRS src/addressbook.capnp)
 

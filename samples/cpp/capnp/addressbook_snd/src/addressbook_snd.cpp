@@ -18,7 +18,8 @@
 */
 
 #include <ecal/ecal.h>
-#include <ecal/msg/capnproto/publisher.h>
+// #include <ecal/msg/capnproto/publisher.h>
+#include "capnproto_publisher.hpp"
 #include <ecal/msg/capnproto/helper.h>
 
 #include <iostream>
@@ -51,6 +52,8 @@ int main(int argc, char **argv)
 
   // create a publisher (topic name "addressbook")
   eCAL::capnproto::CPublisher<AddressBook> pub("addressbook");
+
+  pub.EnableTCPTransport();
 
   auto addressBook = pub.GetBuilder();
   auto people = addressBook.initPeople(2);
